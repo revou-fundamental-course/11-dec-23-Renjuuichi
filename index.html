@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
+    
+    <header class="header-wrapper">
         <img src="assets/smak logo.jpg" alt="logo" class="logo" height="40px" width="40px">
-        <ul class="nav-items">
-            <li>HOME</li>
-            <li>PROFILE</li>
-            <li>CONTACT US!</li>
-        </ul>
-    </nav>
+        <div class="menu">
+            <button onclick="location.href='index.html';">Homes</button>
+            <button onclick="location.href='profile.html';"  >My Profile</button>
+            <button onclick="location.href='portfolio.html';">Portfolio</button>
+            <button onclick="location.href='index.html';" >Message Us</button>
+      </div>
+    </header>
+    
 <hr>
-<header>
-    <h1>Hello Future Stundents!</h1>
-    <p>Welcome!</p>
-    <img src="assets/62190.jpg">
-</header>    
+    <h1 class="title">Hi <span id="name">person</span>, Welcome To Our School!</h1>
+    <img src="assets/62190.jpg">    
 <hr>
+<h2>Our Facility</h2>
 <div class="facility">
     <div>
         <div class="circle" style="background-image: url(assets/bskt.jpg);"></div>
@@ -38,6 +39,63 @@
         <h4>Library</h4>
     </div>
 </div>
-    
+<hr>
+
+<script src="js/script.js"></script>
+<h3><b>Message Us!</b></h3>
+<div class="form-section">
+    <div class="container">
+      <form name="message-form" onsubmit="return validateForm()">
+        <div class="row">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="full-name" placeholder="Your name..">
+        </div>
+        <div class="row">
+        <div class="col-25">
+          <label for="fbdate">Birth-date</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="fbdate" name="birth-date">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-25">
+          <label for="country">Gender</label>
+        </div>
+        <div class="col-75">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-25">
+          <label for="messages">Message</label>
+        </div>
+        <div class="col-75">
+          <textarea id="messages" name="messages" placeholder="Write something.." style="height:100px"></textarea>
+        </div>
+        </div>
+        <br>
+        <div class="row">
+        <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+    <div class="form-output">
+        <br/>	
+         <p>Currrent date: <span id="sender-time"></span>
+        </p>
+        Name :<h2><span id="sender-full-name"></span></h2>
+        <br/>
+        Birth Date - Gender : <span id="sender-birth-date"></span> - <span id="sender-gender"></span>
+        </p>
+            <p>Message: <span id="sender-messages"></span>
+        </p>
+           
+      </div>
+    </div>
 </body>
 </html>
