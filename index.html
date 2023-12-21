@@ -12,15 +12,18 @@
         <img src="assets/smak logo.jpg" alt="logo" class="logo" height="40px" width="40px">
         <div class="menu">
             <button onclick="location.href='index.html';">Homes</button>
-            <button onclick="location.href='profile.html';"  >My Profile</button>
-            <button onclick="location.href='portfolio.html';">Portfolio</button>
-            <button onclick="location.href='index.html';" >Message Us</button>
+            <button onclick="location.href='#prof'"  >Our Profile</button>
+            <button onclick="location.href='#msg';" >Message Us</button>
       </div>
     </header>
     
 <hr>
     <h1 class="title">Hi <span id="name">person</span>, Welcome To Our School!</h1>
-    <img src="assets/62190.jpg">    
+    <div id="slider">
+      <img src="assets/aquino.jpg" class="slider-image" style="display: block;" width="100%" height="100%">
+      <img src="assets/nun.jpg" class="slider-image" style="display: none;" width="100%" height="100%">
+      <img src="assets/kids.jpg" class="slider-image" style="display: none;" width="100%" height="100%">
+    </div> 
 <hr>
 <h2>Our Facility</h2>
 <div class="facility">
@@ -41,8 +44,31 @@
 </div>
 <hr>
 
+
+<h2 id="prof">PROFILE</h2>
+<ul class="no-bullet">
+<li>Nama Sekolah : SMAK THOMAS AQUINO</li>
+<li>NPSN : 50101667</li>
+<li>Alamat : Gg. Pacar IX, Banjar Tengah, Tangeb, Kel. Abianbase,Kec. Mengwi, Kab. Badung, Prov. Bali</li>
+<li>Telp : (0361)9072129</li>
+<li>Email : smakthomasaquino@ymail.com</li>
+<li>Website : www.smakthomasaquinotangeb.com</li>
+<li>Nama Yayasan : Yayasan Insan Mandiri Denpasar</li>
+<li>Alamat Yayasan : Jl. P.B. Sudirman, Dauh Puri Kelod, Kec. Denpasar Barat, Kota Denpasar, Bali 80234, Telp : (0361) 8955766 </li>
+</ul>
+</div>
+<div class="VM">
+<h3>Vision</h3>
+<p>Untuk menjadi penyalur masa depan dengan memberikan desain inovatif dan berdampak yang membantu murid berkembang.</p>
+<h3>Mission</h3>
+<p>Untuk memberikan pelajaran terbaik yang melebihi harapan orang tua  dan membantu mereka mencapai tujuan masa depan mereka.</p>
+</div> 
+</div>
+
+<hr>
+
 <script src="js/script.js"></script>
-<h3><b>Message Us!</b></h3>
+<h3 id="msg"><b>Message Us!</b></h3>
 <div class="form-section">
     <div class="container">
       <form name="message-form" onsubmit="return validateForm()">
@@ -52,7 +78,7 @@
         </div>
         <div class="row">
         <div class="col-25">
-          <label for="fbdate">Birth-date</label>
+          <label for="fbdate">Birth</label>
         </div>
         <div class="col-75">
           <input type="date" id="fbdate" name="birth-date">
@@ -85,17 +111,29 @@
     </div>
 
     <div class="form-output">
-        <br/>	
-         <p>Currrent date: <span id="sender-time"></span>
-        </p>
-        Name :<h2><span id="sender-full-name"></span></h2>
-        <br/>
-        Birth Date - Gender : <span id="sender-birth-date"></span> - <span id="sender-gender"></span>
-        </p>
-            <p>Message: <span id="sender-messages"></span>
-        </p>
-           
+        <table>
+        <tr>
+          <th>Current Time</th>
+          <td>:</td>
+          <td><span id="sender-current-time"></span></td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>:</td>
+          <td><span id="sender-full-name"></span></td>
+        </tr>
+        <tr>
+          <th>Birthdate</th>
+          <td>:</td>
+          <td><span id="sender-birth-date"></span></td>
+        </tr>
+        </table>
       </div>
     </div>
 </body>
+
+<hr>
+<footer>
+  <p class="footer">Copyright by @renrenjuuichigmail.com</p>
+</footer>
 </html>

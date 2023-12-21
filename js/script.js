@@ -2,7 +2,26 @@ let name = prompt("Who are you!?", "");
 document.getElementById("name") .innerHTML = name
 
 
-function validateForm() {
+//slider
+
+let currentIndex = 0
+const images = document.querySelectorAll(".slider-image")
+const totalImages = images.length
+
+function changeImage() {
+    images[currentIndex].style.display = "none"
+    currentIndex = (currentIndex +1) % totalImages
+    images[currentIndex].style.display = "block"
+}
+
+setInterval(changeImage, 2000)
+
+
+
+
+
+
+  function validateForm() {
     var name = document.forms["message-form"]["full-name"].value;
     var date = document.forms["message-form"]["birth-date"].value;
     var gender = document.forms["message-form"]["gender"].value;
@@ -10,7 +29,7 @@ function validateForm() {
 var now = new Date();
 
     if (name == "" || date == "" || gender == "" || messages == "") {
-      alert("Name can't be empty!");
+      alert("Input can't be empty!");
       return false;
     }
 
@@ -21,3 +40,7 @@ var now = new Date();
     document.getElementById("sender-time").innerText = now;
     return false;
   }
+
+
+
+  
